@@ -1,4 +1,4 @@
-import "../App.css";
+﻿import "../App.css";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -23,7 +23,7 @@ function MyIssues() {
     const loadMyIssues = async () => {
       try {
         const response = await fetch(
-          `http://127.0.0.1:5000/api/issues/student/${encodeURIComponent(studentEmail)}`
+          `/api/issues/student/${encodeURIComponent(studentEmail)}`
         );
 
         const data = await response.json();

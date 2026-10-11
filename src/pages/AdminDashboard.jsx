@@ -1,4 +1,4 @@
-import "../App.css";
+﻿import "../App.css";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -17,7 +17,7 @@ const [statusFilter, setStatusFilter] = useState("All");
 }, [navigate]);
   
 useEffect(() => {
-  fetch("http://127.0.0.1:5000/api/issues")
+  fetch("/api/issues")
     .then((response) => response.json())
     .then((data) => {
       setIssues(data);
@@ -30,7 +30,7 @@ useEffect(() => {
   const handleStatusChange = async (id, newStatus) => {
   try {
     const response = await fetch(
-      `http://127.0.0.1:5000/api/issues/${id}/status`,
+      `/api/issues/${id}/status`,
       {
         method: "PUT",
         headers: {
@@ -65,7 +65,7 @@ useEffect(() => {
   const handleCommentChange = async (id, newComment) => {
   try {
     const response = await fetch(
-      `http://127.0.0.1:5000/api/issues/${id}/comment`,
+      `/api/issues/${id}/comment`,
       {
         method: "PUT",
         headers: {

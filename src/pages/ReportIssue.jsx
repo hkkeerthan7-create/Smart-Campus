@@ -1,4 +1,4 @@
-import "../App.css";
+﻿import "../App.css";
 import {useEffect ,useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -26,7 +26,7 @@ const handleAIAnalyze = async () => {
 
   try {
     const response = await fetch(
-      "http://127.0.0.1:5000/api/analyze-issue",
+      "/api/analyze-issue",
       {
         method: "POST",
         headers: {
@@ -72,7 +72,7 @@ const handleSubmit = async (e) => {
 };
 
   try {
-    const response = await fetch("http://127.0.0.1:5000/api/issues", {
+    const response = await fetch("/api/issues", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -161,7 +161,7 @@ const handleSubmit = async (e) => {
   type="button"
   onClick={handleAIAnalyze}
 >
-  🤖 Analyze with AI
+  ðŸ¤– Analyze with AI
 </button>
 
         <button type="submit">Submit Issue</button>

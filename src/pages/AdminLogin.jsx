@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import "../App.css";
 import { useNavigate } from "react-router-dom";
 
@@ -19,7 +19,7 @@ function AdminLogin() {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:5000/api/admin-login",
+        "/api/admin-login",
         {
           method: "POST",
           headers: {
@@ -64,7 +64,7 @@ function AdminLogin() {
           type="button"
           onClick={() => navigate("/")}
         >
-          ← Student Login
+          â† Student Login
         </button>
 
         <form onSubmit={handleLogin}>

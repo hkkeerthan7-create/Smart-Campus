@@ -1,4 +1,4 @@
-const express = require("express");
+﻿const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const dns = require("dns");
@@ -441,7 +441,7 @@ app.post("/api/student-login", async (req, res) => {
 });
 app.post("/api/analyze-issue", async (req, res) => {
   try {
-    const response = await fetch("http://127.0.0.1:8000/analyze-issue", {
+    const response = await fetch("http://ai-service:8000/analyze-issue", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

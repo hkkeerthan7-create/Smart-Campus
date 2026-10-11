@@ -6,7 +6,7 @@ import MyIssues from "./pages/MyIssues";
 import AdminDashboard from "./pages/AdminDashboard";  
 import AdminLogin from "./pages/AdminLogin";  
 import Announcement from "./pages/Announcement";
-import Profile from "./pages/profile";
+import Profile from "./pages/Profile";
 import StudentSignup from "./pages/StudentSignup";
 function App() {
   return (

@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import "../App.css";
 import { useNavigate } from "react-router-dom";
 
@@ -25,7 +25,7 @@ function StudentSignup() {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:5000/api/create-student",
+        "/api/create-student",
         {
           method: "POST",
           headers: {
@@ -109,7 +109,7 @@ function StudentSignup() {
           type="button"
           onClick={() => navigate("/")}
         >
-          ← Back to Student Login
+          â† Back to Student Login
         </button>
       </div>
     </div>
